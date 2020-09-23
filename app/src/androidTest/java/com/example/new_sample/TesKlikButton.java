@@ -149,8 +149,24 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("8")));
     }
+
     @Test
     public void TambahDesimal(){
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button5)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("0.5")));
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("0.7")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("1.2")));
+    }
+
+    @Test
+    public void TambahDesimal2(){
         onView(withId(R.id.button0)).perform(click());
         onView(withId(R.id.button_dot)).perform(click());
         onView(withId(R.id.button5)).perform(click());
@@ -167,4 +183,5 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("1.2")));
     }
+
 }
