@@ -89,13 +89,13 @@ public class TesKlikButton {
     @Test
     public void tesKlikButtonPara1(){
         //cari id button1 terus di klik
-        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("0")));
     }
     @Test
     public void tesKlikButtonPara2(){
         //cari id button1 terus di klik
-        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_para2)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("0")));
     }
     @Test
@@ -107,31 +107,43 @@ public class TesKlikButton {
     @Test
     public void tesKlikButtonTambah(){
         //cari id button1 terus di klik
+        onView(withId(R.id.button9)).perform(click());
         onView(withId(R.id.button_add)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("0")));
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("10")));
     }
     @Test
     public void tesKlikButtonKurang(){
         //cari id button1 terus di klik
+        onView(withId(R.id.button9)).perform(click());
         onView(withId(R.id.button_sub)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("0")));
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("8")));
     }
     @Test
     public void tesKlikButtonsSamaDengan(){
         //cari id button1 terus di klik
         onView(withId(R.id.button_equal)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("0")));
+        onView(withId(R.id.input)).check(matches(withText("")));
     }
     @Test
     public void tesKlikButtonBagi(){
         //cari id button1 terus di klik
+        onView(withId(R.id.button8)).perform(click());
         onView(withId(R.id.button_divide)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("0")));
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("4")));
     }
     @Test
     public void tesKlikButtonKali(){
         //cari id button1 terus di klik
+        onView(withId(R.id.button4)).perform(click());
         onView(withId(R.id.button_multi)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("0")));
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("8")));
     }
 }
