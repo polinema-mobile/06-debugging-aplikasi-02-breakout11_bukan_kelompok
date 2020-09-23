@@ -74,18 +74,21 @@ public class TesKlikButton {
         onView(withId(R.id.button9)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("9")));
     }
+
+    @Test
+    public void tesKlikButtonkosong(){
+        //cari id button1 terus di klik
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("0")));
+    }
+
     @Test
     public void tesKlikButtonAC(){
         //cari id button1 terus di klik
         onView(withId(R.id.button_clear)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("")));
     }
-    @Test
-    public void tesKlikNol(){
-        //cari id button1 terus di klik
-        onView(withId(R.id.button0)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("0")));
-    }
+
     @Test
     public void tesKlikButtonPara1(){
         //cari id button1 terus di klik
@@ -126,7 +129,7 @@ public class TesKlikButton {
     public void tesKlikButtonsSamaDengan(){
         //cari id button1 terus di klik
         onView(withId(R.id.button_equal)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.input)).check(matches(withText("=")));
     }
     @Test
     public void tesKlikButtonBagi(){
