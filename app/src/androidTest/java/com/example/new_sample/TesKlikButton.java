@@ -177,11 +177,27 @@ public class TesKlikButton {
         onView(withId(R.id.button7)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("0.7")));
         onView(withId(R.id.button_add)).perform(click());
-        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_dot)).perform(click());
-        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("1.2")));
     }
 
+    //2 x 2 = 4 x 2 = 8
+    @Test
+    public void DikaliHasilDiKali(){
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("2")));
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("2")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("4")));
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("2")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("8")));
+    }
 }
