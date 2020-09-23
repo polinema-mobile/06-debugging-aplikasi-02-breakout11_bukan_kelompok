@@ -110,11 +110,23 @@ public class TesKlikButton {
     @Test
     public void tesKlikButtonTambah(){
         //cari id button1 terus di klik
-        onView(withId(R.id.button9)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_add)).perform(click());
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
-        onView(withId(R.id.output)).check(matches(withText("10")));
+        onView(withId(R.id.output)).check(matches(withText("2")));
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("3")));
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("4")));
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("5")));
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("6")));
     }
     @Test
     public void tesKlikButtonKurang(){
